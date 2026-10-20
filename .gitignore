@@ -426,3 +426,29 @@ FodyWeavers.xsd
 
 # Official VS Code C# Dev Kit Extension exclusion
 #*.lscache
+
+
+# OpenGeoForge GIS data and runtime state
+.env.*
+!.env.example
+data/**/*.osm.pbf
+data/**/*.pbf
+data/**/*.mbtiles
+data/**/*.pmtiles
+data/**/*.tif
+data/**/*.tiff
+data/**/*.gpkg
+data/**/*.shp
+data/**/*.dbf
+data/**/*.shx
+data/**/*.qix
+data/**/*.prj
+data/**/*.cpg
+**/geoserver-data/
+**/geowebcache/
+**/postgres-data/
+**/redis-data/
+**/backups/
+**/exports/
+*.dump
+*.backup
