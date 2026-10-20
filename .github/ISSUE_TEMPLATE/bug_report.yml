@@ -1,0 +1,51 @@
+name: Bug report
+description: Report a reproducible OpenGeoForge defect
+title: "[Bug]: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping improve OpenGeoForge.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction
+      description: Minimal steps, request, geometry or repository example.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: OpenGeoForge version/commit
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, .NET, PostgreSQL/PostGIS, GeoServer, Redis and browser/client versions where relevant.
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+      render: shell
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched existing issues.
+          required: true
+        - label: I removed secrets and sensitive data.
+          required: true
