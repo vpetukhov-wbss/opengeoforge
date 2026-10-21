@@ -47,3 +47,24 @@ Never silently run `ST_MakeValid`, snapping, simplify or precision reduction on 
 ## Esri interoperability
 
 Esri polygon winding conventions may differ from canonical GeoJSON output. Treat Esri JSON as an explicit adapter boundary, not the internal canonical representation.
+
+## Interoperability profiles
+
+The detailed format-specific rules are maintained separately:
+
+- [RFC 7946 GeoJSON profile](geojson.md)
+- [Esri JSON / ArcGIS geometry rules](esri-json.md)
+- [Geometry interoperability model](interoperability.md)
+- [CRS and axis-order rules](crs-axis-order.md)
+- [OpenLayers client rules](../frontend/openlayers.md)
+
+### Canonical boundary
+
+```text
+PostGIS / NetTopologySuite = canonical geometry
+GeoJSON                  = default public API format
+Esri JSON                = ArcGIS interoperability adapter
+OpenLayers               = browser geometry/render/edit client
+```
+
+No format conversion may silently change CRS, polygon topology, Z/M dimensionality or curve semantics.
