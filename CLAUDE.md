@@ -20,6 +20,12 @@ OpenGeoForge is an open-source, production-oriented GIS platform.
 14. Avoid Helpers/Utils dumping grounds.
 15. Keep unrelated models/types in separate files.
 16. Do not describe a single-node deployment as HA.
+17. GeoJSON, Esri JSON and OpenLayers are distinct models; never conflate them.
+18. Esri Polygon rings require topology-aware shell/hole reconstruction when converting to OGC/GeoJSON.
+19. Esri Envelope has no direct GeoJSON geometry type; preserve extent semantics unless Polygon is explicitly required.
+20. M values are not a portable RFC 7946 contract; never silently drop them.
+21. At OpenLayers API boundaries always distinguish dataProjection from featureProjection/view projection.
+22. Every cross-format adapter must document CRS, dimensions and whether conversion is lossless or lossy.
 
 ## Source hierarchy
 
@@ -29,6 +35,14 @@ For GIS behavior prefer:
 3. official PostGIS docs;
 4. official GeoServer/GeoWebCache docs;
 5. official Esri docs for ArcGIS interoperability;
-6. NetTopologySuite/Npgsql docs.
+6. official OpenLayers docs;
+7. NetTopologySuite/Npgsql docs.
+
+For any GeoJSON/Esri/OpenLayers work, also read:
+- docs/standards/interoperability.md
+- docs/standards/geojson.md
+- docs/standards/esri-json.md
+- docs/standards/crs-axis-order.md
+- docs/frontend/openlayers.md
 
 Verify current stable component versions before changing production pins.

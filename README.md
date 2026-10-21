@@ -34,6 +34,7 @@ OpenGeoForge can support:
 - Redis
 - NetTopologySuite
 - GeoJSON / RFC 7946
+- Esri JSON / ArcGIS REST interoperability
 - MVT
 - WMS / WFS / WMTS
 - OpenLayers / MapLibre
@@ -97,6 +98,11 @@ See [ROADMAP.md](ROADMAP.md).
 - [Architecture overview](docs/architecture/overview.md)
 - [Architecture principles](docs/architecture/principles.md)
 - [Geometry standards](docs/standards/geometry.md)
+- [GeoJSON profile](docs/standards/geojson.md)
+- [Esri JSON / ArcGIS geometry rules](docs/standards/esri-json.md)
+- [Geometry interoperability model](docs/standards/interoperability.md)
+- [CRS and axis-order rules](docs/standards/crs-axis-order.md)
+- [OpenLayers integration rules](docs/frontend/openlayers.md)
 - [API standards](docs/standards/api.md)
 - [Production deployment](docs/deployment/production.md)
 - [Production readiness](docs/operations/production-readiness.md)
