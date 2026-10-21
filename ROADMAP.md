@@ -52,6 +52,10 @@ The roadmap is outcome-oriented and may change based on real-world usage.
 - security hardening.
 
 ## v0.8 — Application patterns
+- React + Expo reference client;
+- OpenLayers web map adapter;
+- MapLibre React Native iOS/Android adapter;
+- headless/backend-only SDK consumption;
 - utilities;
 - properties/parcels;
 - accidents/incidents;
