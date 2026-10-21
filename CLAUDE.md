@@ -26,6 +26,19 @@ OpenGeoForge is an open-source, production-oriented GIS platform.
 20. M values are not a portable RFC 7946 contract; never silently drop them.
 21. At OpenLayers API boundaries always distinguish dataProjection from featureProjection/view projection.
 22. Every cross-format adapter must document CRS, dimensions and whether conversion is lossless or lossy.
+23. React/Expo frontend code uses strict TypeScript and correct React hook/effect rules.
+24. OpenLayers and Leaflet are web/DOM-only in the default architecture.
+25. Expo iOS/Android use a native map adapter; default is MapLibre React Native.
+26. Native map code requires development/native builds where native modules are used; never assume Expo Go.
+27. Use platform-specific .web/.native/.ios/.android modules instead of bundling unsupported engines.
+28. Do not wrap OpenLayers/Leaflet in a WebView for native without an approved ADR.
+29. iOS and Android permission/background/process behavior must be documented separately.
+30. Background location requires an explicit product requirement and minimum necessary permission/accuracy.
+31. Production mobile networking uses HTTPS; broad ATS/Android cleartext exceptions are forbidden.
+32. Sensitive mobile tokens belong in secure native storage, not plain AsyncStorage.
+33. Important offline edits require a durable idempotent queue and explicit 409 conflict handling.
+34. The OpenGeoForge backend must remain fully usable without the reference React/Expo frontend.
+35. Public backend contracts are documented in OpenAPI; generated TypeScript contracts are preferred over duplicate DTOs.
 
 ## Source hierarchy
 
@@ -46,3 +59,19 @@ For any GeoJSON/Esri/OpenLayers work, also read:
 - docs/frontend/openlayers.md
 
 Verify current stable component versions before changing production pins.
+
+## React / Expo / mobile mandatory references
+
+For frontend, Expo, iOS, Android or headless API work read the relevant files before coding:
+
+- docs/frontend/react-expo-typescript.md
+- docs/frontend/expo-architecture.md
+- docs/frontend/map-engine-strategy.md
+- docs/frontend/reference-client-architecture.md
+- docs/frontend/openlayers.md
+- docs/frontend/ios.md
+- docs/frontend/android.md
+- docs/frontend/mobile-storage-security.md
+- docs/api/headless-backend-service.md
+
+Use the react-expo-frontend-specialist for frontend/mobile implementation and headless-api-specialist for public backend-only contracts.

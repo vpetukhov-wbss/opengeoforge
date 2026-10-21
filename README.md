@@ -38,6 +38,7 @@ OpenGeoForge can support:
 - MVT
 - WMS / WFS / WMTS
 - OpenLayers / MapLibre
+- React + Expo / iOS / Android
 - Docker
 - OpenTelemetry
 
@@ -103,6 +104,14 @@ See [ROADMAP.md](ROADMAP.md).
 - [Geometry interoperability model](docs/standards/interoperability.md)
 - [CRS and axis-order rules](docs/standards/crs-axis-order.md)
 - [OpenLayers integration rules](docs/frontend/openlayers.md)
+- [React + Expo + TypeScript rules](docs/frontend/react-expo-typescript.md)
+- [Expo architecture](docs/frontend/expo-architecture.md)
+- [Map engine strategy](docs/frontend/map-engine-strategy.md)
+- [iOS GIS rules](docs/frontend/ios.md)
+- [Android GIS rules](docs/frontend/android.md)
+- [Mobile storage & security](docs/frontend/mobile-storage-security.md)
+- [Reference client architecture](docs/frontend/reference-client-architecture.md)
+- [Headless/backend-only service mode](docs/api/headless-backend-service.md)
 - [API standards](docs/standards/api.md)
 - [Production deployment](docs/deployment/production.md)
 - [Production readiness](docs/operations/production-readiness.md)
