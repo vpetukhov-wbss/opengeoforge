@@ -75,3 +75,12 @@ For frontend, Expo, iOS, Android or headless API work read the relevant files be
 - docs/api/headless-backend-service.md
 
 Use the react-expo-frontend-specialist for frontend/mobile implementation and headless-api-specialist for public backend-only contracts.
+
+## .NET engineering workflow
+
+The accepted backend design is a .NET 10 public gateway with Minimal APIs, PostGIS and Npgsql. Preserve the GeoServer and public geometry boundaries.
+
+The repository currently has design and setup files. Confirm actual manifests, SDKs and executable checks once implementation is checked in.
+
+- Apply the [C# rules](.claude/rules/dotnet-csharp.md) and [async rules](.claude/rules/dotnet-async-concurrency.md) to .NET changes.
+- Use the [.NET feature procedure](.claude/skills/dotnet-feature/SKILL.md) and [code review procedure](.claude/skills/code-review/SKILL.md) for substantial .NET changes. Review signatures with four or more parameters and primitive arguments that can be swapped by mistake.
